@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <script src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/css/tabler.min.css">
+        <link rel="stylesheet" href=".\static\style.css">
+
+        <title>LumpSpot</title>
+    </head>
+    <body>
+        <div class="projectdetails">
+            <h1>Bapp</h1>
+            <p>Bapp was the first project that I fully designed and developed, submited as my final project for CS50, marking the begining of my journey as a software dev</p>
+            <p>
+                Bapp is a web app that allows users to manage their budgets based on customizable categories, and compares their set budgets for each month to their spendings,
+                all of this represented in the home page by two nifty graphs, one displaying how much of their budget each category takes and the other how their current spendings
+                fit within their set budget. 
+            </p>
+            <p>
+                I chose to develop Bapp using Python and the Django framework, my goal being to learn a new technology, fully designing an intuitive and appealing solution to
+                budget management as I found it best. The idea came from the real world problem of wanting to visualize mine and my girlfriend's spendings so we could adjust them,
+                all in a way I thought my girlfriend would apreciate.
+            </p>
+            <p>
+                I began by reading the Django documentation, which has a very simple tutorial to help you get started by which you are guided to develop a poll app.
+                Afterwards I moved on to writing basic page rendering and incorporated Djangos built in auth module and models to quickly make a safe and effective
+                registration and login pages. Django allows you to use python objects to create, modify and interact with your database, which allowed for even an more verbal
+                and safe way to manage this side of the project.
+            </p>
+            <div class="screenshots">
+                <img src="./static/images/bappregister.png" alt="">
+                <img src="./static/images/bapplogin.png" alt="">
+            </div>
+            <p>
+                Onward I learned to use Django's form API as well as their urls dispatcher. Overall the proccess was very straight forward as the documentation is very complete and
+                detailed. The whole page development was a great learning experience as I made myself even more familiar with Python and modules like datetime and pytz.
+            </p>
+            <p>
+                Through alot of trial and error I managed to implemented the transaction display and insertion, which can accept bank provided .csv files or manual input,
+                a budget management page that allows the creation/edition of categories as well as customization of their budget and display color on the graph, a history page 
+                that records any changes made and finally an account page that allows you to change account information as well as the preferred language and currency, which 
+                use cookies.
+            </p>
+            <div class="screenshots">
+                <img src="./static/images/bappupload.png" alt="">
+                <img src="./static/images/bapptransactions.png" alt="">
+                <img src="./static/images/bappcategories.png" alt="">
+                <img src="./static/images/bapphistory.png" alt="">
+                <img src="./static/images/bappaccount.png" alt="">
+            </div>
+            <p>
+                Now I wanted to display graphs with the information, so after some looking around I decided to go with the chartJS javascript library which at first seemed daunting,
+                but after some fiddling I got the data to display as intended and found it to actually be very straightforward. 
+            </p>
+            <div class="screenshots">
+                <img src="./static/images/bappgraph.png" alt="">
+            </div>
+            <a data-fslightbox="gallery" href="./static/images/bapp.png">
+                <div class="img-responsive img-responsive-1x1 rounded border" style="background-image: url(./static/images/bapp.png)"></div>
+            </a>
+            <a href="./index.html">Main page</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+/* Main styles for page on mobile and bigger displays, respectively*/
+body {
+    text-align: center;
+    background-color: grey;
+    background-repeat:no-repeat;
+    background-size: cover;
+    font-size: large;
+}
+
+@media (min-width: 768px) {
+    body {
+        margin-left: 15vw;
+        margin-right:15vw;
+    }
+}
+
+/* About section */
+.about {
+    background-color: whitesmoke;
+    gap: 1rem;
+    border: dashed;
+    border-width: 1px;
+    margin-bottom: 5vh;
+    margin-top: 3vh;
+    padding: 1rem;
+}
+
+
+.about h1 {
+    margin: 0;
+    padding: 1rem;
+}
+
+.abouttitle {
+    align-content: center;
+    border-style:hidden;
+    border-width: 3px;
+    border-radius: 30px;
+    width:auto;
+    margin-bottom: 1rem;
+}
+
+
+/* Projects section */
+.projects {
+    border: dashed;
+    border-width: 1px;
+    background-color: whitesmoke;
+    margin-bottom: 5vh;
+    padding: 1rem;
+}
+
+.projects hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.plist {
+    display:flex;
+    flex-direction: column;
+}
+
+.pitem, .pitem h1 {
+    display:inline;
+}
+
+.ptitle {
+    margin-right: 1rem;
+}
+
+/* Contact info section */
+.contact {
+    border: dashed;
+    border-width: 1px;
+    background-color: whitesmoke;
+    margin-bottom: 5vh;
+    padding: 1rem;
+}
+
+/* Project details */
+
+.projectdetails {
+    background-color: aliceblue;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.screenshots {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.screenshots img {
+    width: 40%;
+}
