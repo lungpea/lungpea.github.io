@@ -5,8 +5,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, width=device-width">
 
-        <script src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/css/tabler.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href=".\static\style.css">
 
         <title>LumpSpot</title>
@@ -14,26 +17,24 @@
     <body>
         <div class="projectdetails">
             <h1>Bapp</h1>
-            <p>Bapp was the first project that I fully designed and developed, submited as my final project for CS50, marking the begining of my journey as a software dev</p>
+            <p>Bapp was the first project I fully designed and developed, submitted as my final project for CS50. It marked the beginning of my journey as a software developer.</p>
             <p>
-                Bapp is a web app that allows users to manage their budgets based on customizable categories, and compares their set budgets for each month to their spendings,
-                all of this represented in the home page by two nifty graphs, one displaying how much of their budget each category takes and the other how their current spendings
-                fit within their set budget. 
+                Bapp is a web app that allows users to manage their budgets based on customizable categories. It compares their set budgets for each month to their actual spending, 
+                all represented on the home page by two intuitive graphs: one showing how much of the budget each category consumes, and the other illustrating how current spending 
+                aligns with the set budget. 
             </p>
             <p>
-                I chose to develop Bapp using Python and the Django framework, my goal being to learn a new technology, fully designing an intuitive and appealing solution to
-                budget management as I found it best. The idea came from the real world problem of wanting to visualize mine and my girlfriend's spendings so we could adjust them,
-                all in a way I thought my girlfriend would apreciate.
+                I developed Bapp using Python and the Django framework, aiming to learn a new technology while designing an intuitive and visually appealing solution to budget management.
+                 The idea stemmed from a real-world need to track and adjust spending for myself and my girlfriend, creating a tool I believed she would appreciate.
             </p>
             <p>
-                I began by reading the Django documentation, which has a very simple tutorial to help you get started by which you are guided to develop a poll app.
-                Afterwards I moved on to writing basic page rendering and incorporated Djangos built in auth module and models to quickly make a safe and effective
-                registration and login pages. Django allows you to use python objects to create, modify and interact with your database, which allowed for even an more verbal
-                and safe way to manage this side of the project.
+                I began by reading the Django documentation, which includes a simple tutorial guiding users through the creation of a poll app. From there, I progressed to writing
+                basic page rendering and integrated Django’s built-in authentication module and models to quickly create secure and functional registration and login pages. 
+                Django’s ability to use Python objects to create, modify, and interact with the database provided a safer and more intuitive way to manage this aspect of the project.
             </p>
             <div class="screenshots">
-                <img src="./static/images/bappregister.png" alt="">
-                <img src="./static/images/bapplogin.png" alt="">
+                <img class="thumbnail" src="./static/images/bappregister.png" alt="" >
+                <img class="thumbnail" src="./static/images/bapplogin.png" alt="" >
             </div>
             <p>
                 Onward I learned to use Django's form API as well as their urls dispatcher. Overall the proccess was very straight forward as the documentation is very complete and
@@ -46,23 +47,64 @@
                 use cookies.
             </p>
             <div class="screenshots">
-                <img src="./static/images/bappupload.png" alt="">
-                <img src="./static/images/bapptransactions.png" alt="">
-                <img src="./static/images/bappcategories.png" alt="">
-                <img src="./static/images/bapphistory.png" alt="">
-                <img src="./static/images/bappaccount.png" alt="">
+                <img class="thumbnail" src="./static/images/bappupload.png" alt="" >
+                <img class="thumbnail" src="./static/images/bapptransactions.png" alt="" >
+                <img class="thumbnail" src="./static/images/bappcategories.png" alt="" >
+                <img class="thumbnail" src="./static/images/bapphistory.png" alt="" >
+                <img class="thumbnail" src="./static/images/bappaccount.png" alt="" >
             </div>
             <p>
                 Now I wanted to display graphs with the information, so after some looking around I decided to go with the chartJS javascript library which at first seemed daunting,
                 but after some fiddling I got the data to display as intended and found it to actually be very straightforward. 
             </p>
+            
             <div class="screenshots">
-                <img src="./static/images/bappgraph.png" alt="">
+                <img class="thumbnail" src="./static/images/bappgraph.png" >
             </div>
-            <a data-fslightbox="gallery" href="./static/images/bapp.png">
-                <div class="img-responsive img-responsive-1x1 rounded border" style="background-image: url(./static/images/bapp.png)"></div>
-            </a>
-            <a href="./index.html">Main page</a>
+
+            <p>
+                This marked the completion of my first project(after a ton of extra debugging and tweaking), a fun and rewarding assignement  that marks the begining of my developer
+                journey. I found Django to be very welcoming and well documented, I hope I'll get to work more with it in the future.
+            </p>
+
+            <div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+                <img id="lightbox-img" src="">
+            </div>
+
+            <a href="./index.html"> <h3 class="return">< Back to homepage</h3></a>
         </div>
+        <script>
+            // Function to close lightbox
+            function closeLightbox() {
+                document.getElementById('lightbox').style.display = 'none';
+            }
+
+            // Function to lightbox with the selected image
+            function openLightbox(event) {
+                const clickedImg = event.target;
+                const lightbox = document.getElementById('lightbox');
+                const lightboxImg = document.getElementById('lightbox-img');
+
+                lightbox.style.display = 'flex';
+                lightboxImg.src = clickedImg.src;
+                console.log("img clicked");
+            }
+
+            // Wait for document to fully load to assign event listeners
+            document.addEventListener("DOMContentLoaded", () => {
+
+                // Give every thumbnail the onclick event to open lightbox
+                document.querySelectorAll('.thumbnail').forEach(img => {
+                    img.addEventListener('click', openLightbox);
+                });
+
+                // Make 'Escape' trigger event to close lightbox
+                document.addEventListener('keydown', function(event) {
+                    if (event.key === 'Escape') {
+                        closeLightbox();
+                    }
+                });
+            });
+          </script>
     </body>
 </html>
