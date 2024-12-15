@@ -58,8 +58,12 @@ a:hover {
         flex-direction: row;
     }
 
+    .profile {
+        margin-left: 5rem;
+    }
+
     .profile img {
-        height: 300px !important;
+        height: 325px !important;
     }
 }
 
@@ -146,7 +150,7 @@ a:hover {
 }
 
 .return {
-    padding: 1rem;
+    padding: 2rem;
 }
 
 /* Contact info section */
