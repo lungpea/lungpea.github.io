@@ -11,6 +11,7 @@ body {
     radial-gradient(at 80% 100%, hsla(271,34%,37%,1) 0px, transparent 50%),
     radial-gradient(at 0% 0%, hsla(14,35%,40%,1) 0px, transparent 50%);
     font-size: large;
+
 }
 
 @media (min-width: 768px) {
@@ -21,7 +22,7 @@ body {
 }
 
 h1 {
-    padding: 1rem;
+    padding: 2rem;
 }
 
 a:link, a:visited {
@@ -45,11 +46,41 @@ a:hover {
 }
 
 .abouttitle {
-    align-content: center;
-    width:auto;
-    margin-bottom: 1rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5rem;
+    gap: 3rem;
 }
 
+@media (min-width: 768px) {
+    .abouttitle {
+        flex-direction: row;
+    }
+
+    .profile img {
+        height: 300px !important;
+    }
+}
+
+.profile {
+    border-radius: 50%;
+    border-style: hidden;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+}
+
+.abouttext, .abouttext p {
+    margin: 2rem;
+}
+
+.languages, .languages p {
+    margin: 2rem;
+}
+
+.webdev, .webdev p {
+    margin: 2rem;
+}
 
 /* Projects section */
 .projects {
@@ -60,15 +91,13 @@ a:hover {
     padding: 1rem;
 }
 
-.projectstitle {
-    align-content: center;
-    width:auto;
-    margin-bottom: 1rem;
+.projects p {
+    padding-bottom: 2rem;
 }
 
 .projects hr {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
 }
 
 .plist {
@@ -76,16 +105,44 @@ a:hover {
     flex-direction: column;
 }
 
-.pitem h2, .pitem h2 {
-    display:inline;
-    margin-right: 1rem;
-}
-
 .ptitle {
     display: flex;
     padding: 0.75rem;
     justify-content: center;
     align-items: baseline;
+    gap:1rem;
+}
+
+.pbody {
+    display:flex;
+    gap: 2rem;
+    flex-direction: column;
+    text-align: center;
+    vertical-align: middle;
+    padding: 30px 0;
+    height: 300px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.pbody img {
+    height: auto;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .pbody {
+        flex-direction: row;
+    }
+
+    .pbody img {
+        height: 100%;
+        width: auto;
+    }
+}
+
+.pbody p {
+    align-self: center;
 }
 
 .return {
