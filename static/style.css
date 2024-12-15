@@ -91,7 +91,7 @@ a:hover {
     padding: 1rem;
 }
 
-.projects p {
+.projects > p {
     padding-bottom: 2rem;
 }
 
